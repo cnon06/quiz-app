@@ -1,0 +1,159 @@
+.app-container {
+  width: 550px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.app-container.shifted {
+  margin-top: 5rem;
+}
+
+.option-list {
+  padding: 18px 10px;
+}
+.option-list .option {
+  border: 1px solid #151d38;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.option-list .option:hover {
+  color: #112b2c;
+  background: #ffd33d;
+}
+
+.option-list .option.correct {
+  color: #155724;
+  background: #d4edda;
+}
+.option-list .option.incorrect {
+  color: #721c24;
+  background: #f8d7da;
+}
+.option-list .option.disabled {
+  pointer-events: none;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#score-box {
+  text-align: center;
+  padding: 30px;
+}
+
+#score-box .trophy-icon {
+  font-size: 48px;
+}
+
+.trophy-bronze {
+  color: #8b4513;
+}
+.trophy-silver {
+  color: #6c757d;
+}
+.trophy-gold {
+  color: #ffc107;
+}
+
+#score-box .score-text {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+#button-box,
+#quiz-box,
+#score-box {
+  display: none;
+}
+#button-box.active,
+#quiz-box.active,
+#score-box.active {
+  display: block;
+}
+
+#button-box {
+  text-align: center;
+}
+
+.review-toggle {
+  margin-top: 10px;
+}
+.review-list {
+  margin-top: 15px;
+}
+.review-item {
+  border: 1px solid #151d38;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.review-item .accordion-button,
+.review-item .accordion-body {
+  border-radius: 0;
+}
+.review-item .accordion-button {
+  box-shadow: none;
+}
+.review-item .accordion-button:focus {
+  box-shadow: none;
+}
+.review-item.correct .accordion-button,
+.review-item.correct .accordion-body {
+  color: #155724;
+  background: #d4edda;
+}
+.review-item.incorrect .accordion-button,
+.review-item.incorrect .accordion-body {
+  color: #721c24;
+  background: #f8d7da;
+}
+.review-question {
+  font-weight: 600;
+}
+.review-question i {
+  margin-right: 8px;
+}
+.review-answer,
+.review-correct-answer {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+#quiz-box #header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: green;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.time-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: orange;
+  width: 100px;
+}
